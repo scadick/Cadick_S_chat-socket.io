@@ -16,6 +16,12 @@
   "homepage": "https://github.com/scadick/chatApp",
   "dependencies": {
     "express": "^4.16.2",
-    "grunt": "^1.0.1"
+    "grunt": "^1.0.1",
+    "socket.io": "^2.0.4"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0"
   }
 }
