@@ -6,12 +6,18 @@
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-	<input type="text" class="nickname" placeholder="What is your nickname?">
+	<h1>Hello and Welcome to my App!</h1>
+	<h3>If you would, please insert your tag below to get started, or a generated name will be chosen for you</h3>
+	<div align="center" class="nickname">
+	<input type="text" placeholder="What would you like your tag name to be?">
+  </div>
 	<ul id="messages"></ul>
+	<div align="center">
 	<form>
 		<input class="message" type="text" id="m" autocomplete="off">
 		<button>send</button>
 	</form>
+</div>
 	<script src="/socket.io/socket.io.js"></script>
 	<script src="js/main.min.js"></script>
 </body>

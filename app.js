@@ -9,11 +9,12 @@ const PORT = process.env.port || 3000;
 // tell our app to serve static files from the public folder
 app.use(express.static('public'));
 
+//set up routes
 app.use(require('./routes/index'));
 app.use(require('./routes/contact'));
 app.use(require('./routes/users'));
 
-// tell the app to be served up at this port (same as WAMP or MAMP, just a different port)
+// tell app to be served up at this port
 const server = app.listen(3000, function() {
 	console.log('listening on localhost:3000');
 });

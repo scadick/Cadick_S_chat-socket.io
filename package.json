@@ -11,8 +11,9 @@
     "url": "https://github.com/scadick/chatApp.git"
   },
   "keywords": [],
-  "author": "TVR",
+  "author": "SJC",
   "license": "MIT",
+  "homepage" : "https://github.com/scadick/chatApp",
   "dependencies": {
     "express": "^4.16.2",
     "socket.io": "^2.0.4"
