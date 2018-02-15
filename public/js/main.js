@@ -38,4 +38,29 @@
 	chatForm.addEventListener('submit', handleSendMessage, false);
 	socket.addEventListener('chat message', appendMessage, false);
 	socket.addEventListener('disconnect message', appendDMessage, false);
+
+	//create variables
+	var typing = false;
+	var timeout = undefined;
+	//create a timeout function to insert when the user stops typing
+	function timeoutFunction(){
+	  typing = false;
+	  socket.emit('.noLongerTypingMessage');
+	}
+	//function to say that a user is typing after he starts typing
+	function typingMessage(){
+	  if(typing == false) {
+	    typing = true
+	    socket.emit('.typingMessage');
+	    timeout = setTimeout(timeoutFunction, 5);
+	  } else {
+	    clearTimeout(timeout);
+	    timeout = setTimeout(timeoutFunction, 5);
+	  }
+
+	}
+//display message that user is typing
+	socket.on('is typing', function(data){
+  	socket.broadcast.emit('typing', {nickName});
+	});
 })();

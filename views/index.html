@@ -8,10 +8,16 @@
 <body>
 	<h1>Hello and Welcome to my App!</h1>
 	<h3>If you would, please insert your tag below to get started, or a generated name will be chosen for you</h3>
-	<div align="center" class="nickname">
-	<input type="text" placeholder="Please enter  your tag">
+	<div align="center">
+	<input type="text" class="nickname" placeholder="Please enter  your tag">
   </div>
 	<ul id="messages"></ul>
+	<div class="typingMessage">
+		<p>User is typing</p>
+	</div>
+	<div class="noLongerTypingMessage">
+		<p>User is no longer typing</p>
+	</div>
 	<div align="center">
 	<form>
 		<input class="message" type="text" id="m" autocomplete="off">
@@ -20,5 +26,6 @@
 </div>
 	<script src="/socket.io/socket.io.js"></script>
 	<script src="js/main.min.js"></script>
+	<script src="js/typing.js"></script>
 </body>
 </html>
